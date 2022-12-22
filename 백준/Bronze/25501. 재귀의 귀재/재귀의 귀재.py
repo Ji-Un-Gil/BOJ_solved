@@ -1,19 +1,26 @@
 import sys
 
-recursion_try = 0
+input = sys.stdin.readline
 
-def recursion(s, l, r):
-    global recursion_try
-    recursion_try += 1
-    if l >= r: return 1
-    elif s[l] != s[r]: return 0
-    else: return recursion(s, l+1, r-1)
+global count
 
-def isPalindrome(s):
-    global recursion_try
-    recursion_try = 0
-    return recursion(s, 0, len(s)-1)
+def recursion(word, l, r):
 
-T = int(sys.stdin.readline())
-for i in range(T):
-    print(isPalindrome(sys.stdin.readline().rstrip()), recursion_try)
+    global count
+    count += 1
+
+    if l >= r :
+        return 1
+    elif word[l] != word[r]:
+        return 0
+    else:
+        return recursion(word, l+1, r-1)
+
+def isPalindrome(word):
+    return recursion(word, 0, len(word)-1)
+
+result=[]
+
+for i in range(int(input())):
+    count = 0
+    print(isPalindrome(input().rstrip()), count)
