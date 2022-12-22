@@ -19,8 +19,6 @@ def recursion(word, l, r):
 def isPalindrome(word):
     return recursion(word, 0, len(word)-1)
 
-result=[]
-
 for i in range(int(input())):
     count = 0
     print(isPalindrome(input().rstrip()), count)
