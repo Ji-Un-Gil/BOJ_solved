@@ -8,7 +8,7 @@ public class Main {
     private static Stack<Integer> stack = new Stack<>();
 
     public static void main(String[] args) throws IOException {
-        int K, num;
+        int K, num, total = 0;
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         K = Integer.parseInt(br.readLine());
@@ -22,6 +22,12 @@ public class Main {
             K--;
         }
 
-        System.out.println(stack.stream().mapToInt(Integer::intValue).sum());
+        // System.out.println(stack.stream().mapToInt(Integer::intValue).sum());
+
+        while (stack.size() > 0)
+            total += stack.pop();
+
+        System.out.println(total);
+
     }
 }
