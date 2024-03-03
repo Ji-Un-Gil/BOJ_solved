@@ -1,10 +1,10 @@
 # [level 2] 도넛과 막대 그래프 - 258711 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/258711#qna) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/258711) 
 
 ### 성능 요약
 
-메모리: 81.1 MB, 시간: 0.10 ms
+메모리: 71.5 MB, 시간: 0.08 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 03월 03일 16:11:35
+2024년 03월 03일 16:41:10
 
 ### 문제 설명
 

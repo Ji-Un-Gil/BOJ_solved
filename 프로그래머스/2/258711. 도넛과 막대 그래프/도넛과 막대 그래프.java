@@ -22,7 +22,7 @@ class Solution {
             int[] value = entry.getValue();
 
             if (value[0] >= 2 && value[1] == 0) {
-                answer[0] = Math.max(answer[0], key);
+                answer[0] = key;
             }
         }
 
