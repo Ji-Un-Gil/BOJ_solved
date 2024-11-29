@@ -1,6 +1,4 @@
-select id, email, first_name, last_name
-from developers
-where skill_code & (select code from skillcodes where name = 'JavaScript')
-or skill_code & (select code from skillcodes where name = 'React')
-or skill_code & (select code from skillcodes where name = 'Vue')
-order by id;
+select distinct d.id, d.email, d.first_name, d.last_name
+from developers as d inner join skillcodes s on s.code = d.skill_code & s.code
+where s.category like 'Front End'
+order by d.id;
